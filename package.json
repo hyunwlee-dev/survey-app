@@ -1,6 +1,6 @@
 {
   "name": "survey-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,8 +11,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_eb184f46c0ed320",
-    "postinstall": "husky install",
-    "commit": "./node_modules/cz-customizable/standalone.js"
+    "prepare": "husky install && chmod ug+x .husky/*",
+    "commit": "./node_modules/cz-customizable/standalone.js",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "14.2.4",
@@ -23,6 +24,11 @@
     "@chromatic-com/storybook": "^1.5.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/release-notes-generator": "^14.0.1",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
@@ -37,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^7.13.1",
     "@typescript-eslint/parser": "^7.13.1",
     "commitizen": "^4.3.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.4",
@@ -46,6 +53,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
+    "semantic-release": "^24.0.0",
     "storybook": "^8.1.10",
     "typescript": "^5"
   },

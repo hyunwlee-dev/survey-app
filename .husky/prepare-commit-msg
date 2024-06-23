@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "🚦 PREPARE-COMMIT-MSG | Start cz with cz-customizable..."
+# Skip prepare-commit-msg in CI environment
+if [ "$CI" = "true" ]; then
+	exit 0
+fi
 
-# Check if running in a terminal
+echo "🚦 PREPARE-COMMIT-MSG | Start cz with cz-customizable..."
 exec </dev/tty && npx cz --hook || true

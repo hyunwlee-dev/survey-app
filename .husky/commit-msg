@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "🚦 COMMIT-MSG | commitlint check..."
+if [ "$CI" = "true" ]; then
+	exit 0
+fi
 
+echo "🚦 COMMIT-MSG | commitlint check..."
 npx commitlint --edit ${1}
