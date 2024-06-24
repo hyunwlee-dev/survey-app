@@ -12,6 +12,7 @@ export const vars = createThemeContract({
     bodyL: null,
     headingL: null,
     headingXL: null,
+    headingXXL: null,
   },
 });
 
@@ -25,7 +26,8 @@ createGlobalTheme(':root', vars, {
     bodyS: '12px',
     bodyM: '12px',
     bodyL: '14px',
-    headingL: '18px',
-    headingXL: '28px',
+    headingL: '16px',
+    headingXL: '32px',
+    headingXXL: '48px',
   },
 });

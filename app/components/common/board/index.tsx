@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { PropsWithClassName } from '@/app/types';
+import StarIcon from '@icons/icon-star.svg';
 import styles from './board.css';
 
 interface IBoard {
@@ -14,10 +15,15 @@ export default function Board({
   children,
 }: PropsWithClassName<IBoard>) {
   return (
-    <main className={clsx(styles.board, className)}>
-      {headingText && <h2 className={styles.heading}>{headingText}</h2>}
+    <section className={clsx(styles.board, className)}>
+      {headingText && (
+        <div className={styles.headingWrapper}>
+          <StarIcon className={styles.starIcon} />
+          <h2 className={styles.heading}>{headingText}</h2>
+        </div>
+      )}
       {subText && <h3 className={styles.sub}>{subText}</h3>}
-      <section>{children}</section>
-    </main>
+      {children}
+    </section>
   );
 }
