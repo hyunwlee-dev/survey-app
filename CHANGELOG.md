@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.1.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.1.0...v1.1.1) (2024-06-24)
+
+### 📝 Docs
+
+* **README:** add chromatic url ([0f24816](https://github.com/hyunwlee-dev/survey-app/commit/0f248163010cf7bb21d3cdabd9ffee35c2487208))
+
 ## [1.1.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.0.0...v1.1.0) (2024-06-24)
 
 ### ✨ Features
