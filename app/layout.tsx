@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import 'normalize.css';
 import '@styles/global.css';
+import { robotoMono } from './styles/font';
 
 const title = process.env.NEXT_PUBLIC_TITLE || '';
 const description = process.env.NEXT_PUBLIC_DESCRIPTION || '';
@@ -42,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={robotoMono.className}>{children}</body>
     </html>
   );
 }
