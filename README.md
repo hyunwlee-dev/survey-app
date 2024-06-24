@@ -64,4 +64,4 @@ Here are some example commit messages that adhere to the convention:
 
 You can view the Storybook for this project on Chromatic:
 
-- [main]()
+- [main](https://667507f713d80e50bf5f3f48-reaiinooit.chromatic.com/)
