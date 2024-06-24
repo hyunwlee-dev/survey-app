@@ -1,5 +1,15 @@
 # 🚦 CHANGELOG
 
+## [1.2.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.1.1...v1.2.0) (2024-06-24)
+
+### ✨ Features
+
+* **component:** add board component, stories ([7b92909](https://github.com/hyunwlee-dev/survey-app/commit/7b929099b2db49ec6120858cec3a582fd76b0efc))
+
+### 💄 Styles
+
+* change design draft ([907698c](https://github.com/hyunwlee-dev/survey-app/commit/907698ca4e494d1f6a302457f5f900902df6fa42))
+
 ## [1.1.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.1.0...v1.1.1) (2024-06-24)
 
 ### 📝 Docs
