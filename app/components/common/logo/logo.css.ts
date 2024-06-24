@@ -4,15 +4,17 @@ import $breakpoints from '@/app/styles/utils';
 const logo = style({
   position: 'absolute',
   transform: 'scale(0.4)',
-  right: '0',
-  bottom: '2.4rem',
+  bottom: '2rem',
+  right: 0,
   '@media': {
     [$breakpoints.tablet]: {
-      bottom: '5.6rem',
-      right: '6.563rem',
+      bottom: '3.6rem',
+      right: '2.8rem',
       transform: 'scale(0.75)',
     },
     [$breakpoints.laptop]: {
+      bottom: '5.6rem',
+      right: '5.6rem',
       transform: 'scale(1)',
     },
   },

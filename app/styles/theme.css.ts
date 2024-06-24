@@ -19,7 +19,7 @@ createGlobalTheme(':root', vars, {
   color: {
     pureWhite: '#FFFFFF',
     green: '#3ABFC3',
-    lightGreen: '#E7DFCD',
+    lightGreen: '#E6F4F1',
   },
   font: {
     bodyS: '12px',
