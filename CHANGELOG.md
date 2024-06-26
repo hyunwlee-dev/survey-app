@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.5.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.4.0...v1.5.0) (2024-06-26)
+
+### ✨ Features
+
+* add logged in no access ([4197b35](https://github.com/hyunwlee-dev/survey-app/commit/4197b351143fbc9f1d7c4c961045eb904b14bcd3))
+
 ## [1.4.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.3.0...v1.4.0) (2024-06-26)
 
 ### ✨ Features
