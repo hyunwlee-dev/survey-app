@@ -1,5 +1,20 @@
 # 🚦 CHANGELOG
 
+## [1.6.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.5.1...v1.6.0) (2024-06-26)
+
+### ✨ Features
+
+* **api:** add createSurvey server action function ([58b148e](https://github.com/hyunwlee-dev/survey-app/commit/58b148e65d6d849236caefe06e54e0986ca1855f))
+* **component:** add home link button in finish page ([c494430](https://github.com/hyunwlee-dev/survey-app/commit/c4944307a580452fe3b577f9d6410e46629b2789))
+
+### ♻️ Refactor
+
+* **util:** add gradeService function ([cf01445](https://github.com/hyunwlee-dev/survey-app/commit/cf014458ebf41e66ba81e77b9c95e045363701f1))
+
+### 💄 Styles
+
+* extends margin-top buttons in survey-access-form ([cd47e09](https://github.com/hyunwlee-dev/survey-app/commit/cd47e09c41181da39b80f4ee5ed4efec84689af6))
+
 ## [1.5.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.5.0...v1.5.1) (2024-06-26)
 
 ### 🐛 Bug Fixes
