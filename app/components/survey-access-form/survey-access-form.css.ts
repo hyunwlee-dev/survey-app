@@ -20,7 +20,7 @@ const surveyButton = style({
 });
 
 const dashboardLink = style({
-  marginTop: '0.5rem',
+  marginTop: '1rem',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
