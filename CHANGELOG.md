@@ -1,5 +1,18 @@
 # 🚦 CHANGELOG
 
+## [1.3.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.2.0...v1.3.0) (2024-06-26)
+
+### ✨ Features
+
+* add login page ([cd76259](https://github.com/hyunwlee-dev/survey-app/commit/cd7625966958670b02d833905126fc09ddd38a17))
+* **component:** add facility-satisfaction-fields component (시설 만족도) ([f43ddd6](https://github.com/hyunwlee-dev/survey-app/commit/f43ddd63f4d8284f913d30798aea60df25a9e13c))
+* **component:** add finish page ([6040737](https://github.com/hyunwlee-dev/survey-app/commit/6040737a0ba7c00f6d710dc1192c0eb6c95b96df))
+* **component:** add funnel component ([0382de8](https://github.com/hyunwlee-dev/survey-app/commit/0382de86756a46840186a5856ba4483ea84dbf49))
+* **component:** add service-satisfaction-fields component (서비스 만족도) ([758a3e3](https://github.com/hyunwlee-dev/survey-app/commit/758a3e366bfdd0d299f8fc30e6f53ffdeba7af05))
+* **component:** add step-buttons component ([f66ddaa](https://github.com/hyunwlee-dev/survey-app/commit/f66ddaac3286600a3613b08f39af103384491a44))
+* **component:** add willingness-revisit-fields component (재방문 의사) ([a8d28cd](https://github.com/hyunwlee-dev/survey-app/commit/a8d28cd1c0ce3a3dbd2216079895e2cf1f575ddd))
+* **component:** survey proccess ([0b67ec4](https://github.com/hyunwlee-dev/survey-app/commit/0b67ec4162b90a66ad2296adadb36a65e36f9cfb))
+
 ## [1.2.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.1.1...v1.2.0) (2024-06-24)
 
 ### ✨ Features
