@@ -27,10 +27,8 @@ export default function FacilitySatisfactionFields({
   question,
   options,
   register,
-  trigger,
   errors,
   prevStep,
-  nextStep,
   watch,
 }: PropsWithClassName<FacilitySatisfactionFieldsProps>) {
   return (
@@ -68,13 +66,7 @@ export default function FacilitySatisfactionFields({
         ))}
       </ul>
       <div className={styles.error}>{errors['facility']?.message}</div>
-      <StepButtons
-        prevStep={prevStep}
-        nextStep={async () => {
-          const result = await trigger('facility');
-          if (result) nextStep();
-        }}
-      />
+      <StepButtons prevStep={prevStep} />
     </>
   );
 }

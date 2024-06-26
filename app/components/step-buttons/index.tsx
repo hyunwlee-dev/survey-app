@@ -3,7 +3,7 @@ import styles from './step-buttons.css';
 
 interface StepButtonsProps {
   prevStep?: () => void;
-  nextStep: () => Promise<void>;
+  nextStep?: () => Promise<void>;
 }
 
 export default function StepButtons({
@@ -12,14 +12,21 @@ export default function StepButtons({
 }: PropsWithClassName<StepButtonsProps>) {
   return (
     <div className={styles.wrapper}>
-      <button
-        className={styles.stepButton}
-        onClick={async () => {
-          await nextStep();
-        }}
-      >
-        다음
-      </button>
+      {nextStep && (
+        <button
+          className={styles.stepButton}
+          onClick={async () => {
+            await nextStep();
+          }}
+        >
+          다음
+        </button>
+      )}
+      {!nextStep && (
+        <button type="submit" className={styles.stepButton}>
+          완료
+        </button>
+      )}
       {prevStep && (
         <button className={styles.stepButton} onClick={prevStep}>
           이전

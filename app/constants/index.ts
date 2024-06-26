@@ -27,3 +27,5 @@ export const Gretting = {
   SUB_TITLE:
     '안녕하세요.\n인포그랩 호텔 설문조사입니다.\n설문조사에 성실히 응해주시길 바랍니다. (질문은 총 3개입니다.)',
 } as const;
+
+export const LOCALSTORAGGE_KEY = 'survey';

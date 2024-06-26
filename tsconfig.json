@@ -25,6 +25,7 @@
       "@types": ["./app/types/"],
       "@styles/*": ["./app/styles/*"],
       "@constants": ["./app/constants/"],
+      "@utils/*": ["./app/utils/*"],
       "@icons/*": ["./public/icons/*"],
       "@images/*": ["./public/images/*"]
     }
