@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.6.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.6.0...v1.6.1) (2024-06-26)
+
+### 🐛 Bug Fixes
+
+* change createClient function to server action ([017a5bc](https://github.com/hyunwlee-dev/survey-app/commit/017a5bc47aae7fa3e3d2b90b4d7addd51d5c6d01))
+
 ## [1.6.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.5.1...v1.6.0) (2024-06-26)
 
 ### ✨ Features
