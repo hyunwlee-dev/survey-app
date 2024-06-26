@@ -20,7 +20,7 @@ export default function LoginForm() {
         placeholder="비밀번호를 입력하세요."
       />
       <button className={styles.surveyButton} type="submit" formAction={login}>
-        대시보드 이동
+        로그인
       </button>
     </form>
   );
