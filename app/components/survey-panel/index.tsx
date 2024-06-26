@@ -29,7 +29,7 @@ export default function SurveyPanel({
 }) {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams.toString());
-  const [step, setStep] = useState<Steps>('서비스 만족도');
+  const [step, setStep] = useState<Steps>('완료');
   const currentStep = steps.indexOf(step);
   const isLastStep = currentStep === steps.length;
 
