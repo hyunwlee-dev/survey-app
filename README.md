@@ -7,6 +7,10 @@
 ![TypeScript:v5.5.2](https://img.shields.io/badge/v5.5.2-575757?logo=typescript&logoColor=FFFFFF&label=TypeScript&labelColor=3178C6)
 ![Storybook:v8.1.10](https://img.shields.io/badge/v8.1.10-575757?logo=sass&logoColor=FFFFFF&label=Storybook&labelColor=FF4785)
 
+![Prisma](https://img.shields.io/badge/Prisma-black?logo=prisma&style=for-the-badge)
+
+![supabase](https://shields.io/badge/supabase-black?logo=supabase&style=for-the-badge)
+
 ## Getting Started
 
 First, run the development server:
