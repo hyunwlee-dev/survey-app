@@ -28,4 +28,10 @@ export const Gretting = {
     '안녕하세요.\n인포그랩 호텔 설문조사입니다.\n설문조사에 성실히 응해주시길 바랍니다. (질문은 총 3개입니다.)',
 } as const;
 
+export const LoginGretting = {
+  TITLE: 'Login',
+  SUB_TITLE:
+    '안녕하세요.\n대시보드에 접근하기 위해서는 관리자 권한이 필요합니다.',
+};
+
 export const LOCALSTORAGGE_KEY = 'survey';

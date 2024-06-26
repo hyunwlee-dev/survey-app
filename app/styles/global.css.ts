@@ -66,3 +66,11 @@ globalStyle('input[type="text"]', {
   borderRadius: '8px',
   border: `1px solid ${vars.color.lightGray}`,
 });
+
+globalStyle('input[type="password"]', {
+  width: '100%',
+  height: '2.5rem',
+  textIndent: '0.889rem',
+  borderRadius: '8px',
+  border: `1px solid ${vars.color.lightGray}`,
+});

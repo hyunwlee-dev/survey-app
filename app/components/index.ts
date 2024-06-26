@@ -4,5 +4,6 @@ export { default as ServiceSatisfactionFields } from './service-satisfaction-fie
 export { default as FacilitySatisfactionFields } from './facility-satisfaction-fields';
 export { default as WillingnessRevisitFields } from './willingness-revisit-fields';
 export { default as Finish } from './finish';
-export { default as LoginForm } from './login-form';
+export { default as SurveyAccessForm } from './survey-access-form';
 export { default as StepButtons } from './step-buttons';
+export { default as LoginForm } from './login-form';

@@ -1,6 +1,14 @@
-import { getUsers } from './data';
+import { redirect } from 'next/navigation';
 
-export default async function Home() {
-  const users = await getUsers();
-  return <main>{JSON.stringify(users)}</main>;
+import { createClient } from '@utils/supabase/server';
+
+export default async function DashboardPage() {
+  const supabase = createClient();
+
+  const { data, error } = await supabase.auth.getUser();
+  if (error || !data?.user) {
+    redirect('/login');
+  }
+
+  return <p>Hello {data.user.email}</p>;
 }

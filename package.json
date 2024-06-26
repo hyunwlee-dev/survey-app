@@ -38,6 +38,8 @@
     "@storybook/nextjs": "^8.1.10",
     "@storybook/react": "^8.1.10",
     "@storybook/test": "^8.1.10",
+    "@supabase/ssr": "^0.4.0",
+    "@supabase/supabase-js": "^2.44.0",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",

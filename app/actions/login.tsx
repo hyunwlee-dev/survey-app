@@ -1,37 +1,26 @@
 'use server';
 
-import { PrismaClient } from '@prisma/client';
+import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
-import { z } from 'zod';
 
-const prisma = new PrismaClient();
+import { createClient } from '@utils/supabase/server';
 
-const SurveySchema = z.object({
-  team: z.string().min(1, '팀을 입력해주세요.'),
-  name: z.string().min(1, '이름을 입력해주세요.'),
-});
+export async function login(formData: FormData) {
+  const supabase = createClient();
 
-export async function login(prevState: string | undefined, formData: FormData) {
-  const validatedFields = SurveySchema.safeParse({
-    team: formData.get('team'),
-    name: formData.get('name'),
-  });
+  // type-casting here for convenience
+  // in practice, you should validate your inputs
+  const data = {
+    email: formData.get('email') as string,
+    password: formData.get('password') as string,
+  };
 
-  if (!validatedFields.success) return validatedFields.error.issues[0].message;
+  const { error } = await supabase.auth.signInWithPassword(data);
 
-  const { team, name } = validatedFields.data;
+  if (error) {
+    redirect('/error');
+  }
 
-  const isExist = await prisma.user.findMany({
-    where: {
-      team: team,
-      name: name,
-    },
-  });
-
-  if (!isExist.length)
-    return '존재하지 않는 사용자입니다. 팀과 이름을 확인해주세요.';
-
-  redirect(
-    `/survey?team=${encodeURIComponent(team)}&name=${encodeURIComponent(name)}`,
-  );
+  revalidatePath('/dashboard', 'layout');
+  redirect('/dashboard');
 }
