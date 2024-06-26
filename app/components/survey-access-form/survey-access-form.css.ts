@@ -5,6 +5,16 @@ const form = style({
   position: 'relative',
 });
 
+const select = style({
+  width: '100%',
+  height: '2.5rem',
+  textIndent: '0.889rem',
+  borderRadius: '8px',
+  border: `1px solid ${vars.color.lightGray}`,
+  background: 'transparent',
+  cursor: 'pointer',
+});
+
 const nameInput = style({
   margin: '1rem 0 2rem',
 });
@@ -34,13 +44,13 @@ const dashboardLink = style({
 
 const error = style({
   position: 'absolute',
-  bottom: '6.8rem',
+  bottom: '7.2rem',
   left: '0.2rem',
   font: vars.font.bodyS,
   color: 'red',
   fontWeight: 500,
 });
 
-const styles = { form, nameInput, surveyButton, dashboardLink, error };
+const styles = { form, select, nameInput, surveyButton, dashboardLink, error };
 
 export default styles;

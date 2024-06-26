@@ -5,11 +5,19 @@ import { useFormState } from 'react-dom';
 import { surveyAccess } from '@actions/survey-access';
 import styles from './survey-access-form.css';
 
-export default function SurveyAccessForm() {
+export default function SurveyAccessForm({
+  teamList,
+}: {
+  teamList: { id: bigint; name: string | null }[];
+}) {
   const [errorMessage, dispatch] = useFormState(surveyAccess, undefined);
   return (
     <form className={styles.form} action={dispatch}>
-      <input type="text" id="team" name="team" placeholder="팀을 입력하세요." />
+      <select className={styles.select} id="team" name="team">
+        {teamList.map(({ id, name }) => (
+          <option key={id}>{name}</option>
+        ))}
+      </select>
       <input
         type="text"
         className={styles.nameInput}

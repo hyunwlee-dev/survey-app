@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation';
 import { z } from 'zod';
 
 const SurveySchema = z.object({
-  team: z.string().min(1, '팀을 입력해주세요.'),
+  team: z.string().min(1, '팀을 선택해주세요.'),
   name: z.string().min(1, '이름을 입력해주세요.'),
 });
 

@@ -1,7 +1,5 @@
-import { checkLoggedIn } from '@actions/login';
+import { Board } from '@/app/components';
 
 export default async function DashboardPage() {
-  const { user } = await checkLoggedIn();
-
-  return <p>안녕하세요, {user.email}</p>;
+  return <Board>안녕하세요, </Board>;
 }
