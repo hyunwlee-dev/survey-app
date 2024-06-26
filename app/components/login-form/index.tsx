@@ -19,9 +19,8 @@ export default function LoginForm() {
         defaultValue="4321"
         placeholder="비밀번호를 입력하세요."
       />
-      {/*<div className={styles.error}>{errorMessage && <>{errorMessage}</>}</div>*/}
       <button className={styles.surveyButton} type="submit" formAction={login}>
-        설문 시작하기
+        대시보드 이동
       </button>
     </form>
   );
