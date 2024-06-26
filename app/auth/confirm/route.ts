@@ -1,3 +1,4 @@
+/*
 import { type EmailOtpType } from '@supabase/supabase-js';
 import { type NextRequest, NextResponse } from 'next/server';
 
@@ -30,3 +31,4 @@ export async function GET(request: NextRequest) {
   redirectTo.pathname = '/error';
   return NextResponse.redirect(redirectTo);
 }
+*/
