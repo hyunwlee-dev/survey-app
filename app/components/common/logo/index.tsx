@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import type { PropsWithClassName } from '@/app/types';
 import LogoIcon from '@icons/logo.svg';
+import type { PropsWithClassName } from '@types';
 import styles from './logo.css';
 
 /**

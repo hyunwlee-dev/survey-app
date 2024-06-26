@@ -2,9 +2,12 @@ import { createThemeContract, createGlobalTheme } from '@vanilla-extract/css';
 
 export const vars = createThemeContract({
   color: {
+    primary: null,
     pureWhite: null,
     green: null,
     lightGreen: null,
+    darkGreen: null,
+    lightGray: null,
   },
   font: {
     bodyS: null,
@@ -18,9 +21,12 @@ export const vars = createThemeContract({
 
 createGlobalTheme(':root', vars, {
   color: {
+    primary: '#44CFBB',
     pureWhite: '#FFFFFF',
     green: '#3ABFC3',
     lightGreen: '#E6F4F1',
+    darkGreen: '#00373D',
+    lightGray: '#e0dfe1',
   },
   font: {
     bodyS: '12px',

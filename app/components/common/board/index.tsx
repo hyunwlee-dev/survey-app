@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { PropsWithClassName } from '@/app/types';
 import StarIcon from '@icons/icon-star.svg';
+import type { PropsWithClassName } from '@types';
 import styles from './board.css';
 
 interface IBoard {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Board } from '@components/common';
+import { Board } from '@components';
 
 const meta = {
   title: 'Components/Board',

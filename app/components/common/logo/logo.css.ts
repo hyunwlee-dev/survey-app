@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import $breakpoints from '@/app/styles/utils';
+import $breakpoints from '@styles/utils';
 
 const logo = style({
   position: 'absolute',

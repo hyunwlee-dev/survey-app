@@ -19,8 +19,12 @@
     ],
     "paths": {
       "@/*": ["./*"],
+      "@components": ["./app/components/"],
       "@components/*": ["./app/components/*"],
+      "@actions/*": ["./app/actions/*"],
+      "@types": ["./app/types/"],
       "@styles/*": ["./app/styles/*"],
+      "@constants": ["./app/constants/"],
       "@icons/*": ["./public/icons/*"],
       "@images/*": ["./public/images/*"]
     }

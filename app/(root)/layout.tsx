@@ -1,4 +1,4 @@
-import { Container, Logo } from '@components/common';
+import { Container, Logo } from '@components';
 
 export default function Layout({
   children,

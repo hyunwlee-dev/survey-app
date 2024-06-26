@@ -56,9 +56,11 @@
     "lint-staged": "^15.2.7",
     "normalize.css": "^8.0.1",
     "prettier": "^3.3.2",
+    "react-hook-form": "^7.52.0",
     "semantic-release": "^24.0.0",
     "storybook": "^8.1.10",
-    "typescript": "^5"
+    "typescript": "^5",
+    "zod": "^3.23.8"
   },
   "config": {
     "commitizen": {

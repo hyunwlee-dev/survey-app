@@ -58,3 +58,11 @@ globalStyle('button', {
   border: 'none',
   cursor: 'pointer',
 });
+
+globalStyle('input[type="text"]', {
+  width: '100%',
+  height: '2.5rem',
+  textIndent: '0.889rem',
+  borderRadius: '8px',
+  border: `1px solid ${vars.color.lightGray}`,
+});
