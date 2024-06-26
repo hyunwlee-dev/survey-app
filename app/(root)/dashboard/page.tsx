@@ -1,3 +1,6 @@
-export default function Home() {
-  return <main>dashboard! from hyunwlee</main>;
+import { getUsers } from './data';
+
+export default async function Home() {
+  const users = await getUsers();
+  return <main>{JSON.stringify(users)}</main>;
 }
