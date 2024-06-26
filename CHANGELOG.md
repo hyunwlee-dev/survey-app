@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.5.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.5.0...v1.5.1) (2024-06-26)
+
+### 🐛 Bug Fixes
+
+* **wrong codes:** remove middleware, treat cookie in login server action ([7f5e030](https://github.com/hyunwlee-dev/survey-app/commit/7f5e030a198de0b65035be5e0c55ac0b155b231d))
+
 ## [1.5.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.4.0...v1.5.0) (2024-06-26)
 
 ### ✨ Features
