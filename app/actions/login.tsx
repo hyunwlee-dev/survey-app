@@ -18,5 +18,7 @@ export async function login(prevState: string | undefined, formData: FormData) {
 
   const { team, name } = validatedFields.data;
 
-  redirect(`/survey?team=${team}&name=${name}`);
+  redirect(
+    `/survey?team=${encodeURIComponent(team)}&name=${encodeURIComponent(name)}`,
+  );
 }
