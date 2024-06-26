@@ -1,16 +1,9 @@
-import { redirect } from 'next/navigation';
-import { Board, LoginForm } from '@/app/components';
+import { redirectIfLoggedIn } from '@actions/login';
+import { Board, LoginForm } from '@components';
 import { LoginGretting } from '@constants';
 
-import { createClient } from '@utils/supabase/server';
-
 export default async function LoginPage() {
-  const supabase = createClient();
-
-  const { data, error } = await supabase.auth.getUser();
-  if (!error && data?.user) {
-    redirect('/dashboard');
-  }
+  await redirectIfLoggedIn();
 
   return (
     <Board headingText={LoginGretting.TITLE} subText={LoginGretting.SUB_TITLE}>

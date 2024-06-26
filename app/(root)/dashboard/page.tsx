@@ -1,14 +1,7 @@
-import { redirect } from 'next/navigation';
-
-import { createClient } from '@utils/supabase/server';
+import { checkLoggedIn } from '@actions/login';
 
 export default async function DashboardPage() {
-  const supabase = createClient();
+  const { user } = await checkLoggedIn();
 
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    redirect('/login');
-  }
-
-  return <p>Hello {data.user.email}</p>;
+  return <p>안녕하세요, {user.email}</p>;
 }
