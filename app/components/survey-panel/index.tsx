@@ -12,6 +12,7 @@ import {
 } from '@components';
 import { Survey } from '@constants';
 import type { SurveyType } from '@types';
+import { gradeService } from '@utils/gradeService';
 import LocalStorage from '@utils/local-storage';
 
 const steps = ['서비스 만족도', '재방문 의사', '시설 만족도', '완료'] as const;
@@ -46,28 +47,7 @@ export default function SurveyPanel() {
 
   const grade = (data: SurveyType) => {
     const { service, revisit, facility } = data;
-    let sum = 0;
-
-    switch (service.toString()) {
-      case '매우 불만족':
-        sum += 1;
-        break;
-      case '불만족':
-        sum += 2;
-        break;
-      case '보통':
-        sum += 3;
-        break;
-      case '만족':
-        sum += 4;
-        break;
-      case '매우 만족':
-        sum += 5;
-        break;
-      default:
-        sum += 0;
-        break;
-    }
+    let sum = gradeService(service.toString());
     sum += Number(revisit);
     sum += facility.length;
     return sum;
