@@ -10,6 +10,28 @@
 ### 🐛 Bug Fixes
 
 * add suspense boundary for useSearchParams ([a745119](https://github.com/hyunwlee-dev/survey-app/commit/a7451194581d21c72f50add789ff5b67efd42d20))
+* **component:** change button text ([a45692d](https://github.com/hyunwlee-dev/survey-app/commit/a45692d8d8b81a647b1a40c8299d8fbb32faa1a7))
+* remove necessary import ([2e5a614](https://github.com/hyunwlee-dev/survey-app/commit/2e5a614186f536d997834a89c740b4b25a8cf739))
+* **wrong codes:** handle URL encoding redirect in login action ([29df140](https://github.com/hyunwlee-dev/survey-app/commit/29df140c3516ca4039cb6e29fa8de20491d7ba3c))
+
+### 📝 Docs
+
+* **README:** update README.md ([0413231](https://github.com/hyunwlee-dev/survey-app/commit/04132316dd8ea3abf98caf574252b6795e5ddcbd))
+
+### 💫 CI/CD
+
+* **workflow:** add chromatic trigger branch 'storybook' ([777755c](https://github.com/hyunwlee-dev/survey-app/commit/777755c2c945df248818d85964a8bd55345c2968))
+
+## [1.4.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.3.0...v1.4.0) (2024-06-26)
+
+### ✨ Features
+
+* add supabase login for dashboard access ([ac2d4af](https://github.com/hyunwlee-dev/survey-app/commit/ac2d4afbc0e866ea9e103ca1a75d06fc282551df))
+* save survey result to localStorage ([2c989e9](https://github.com/hyunwlee-dev/survey-app/commit/2c989e94791c5e1c037797c548ca274be079f08f))
+
+### 🐛 Bug Fixes
+
+* add suspense boundary for useSearchParams ([a745119](https://github.com/hyunwlee-dev/survey-app/commit/a7451194581d21c72f50add789ff5b67efd42d20))
 * remove necessary import ([2e5a614](https://github.com/hyunwlee-dev/survey-app/commit/2e5a614186f536d997834a89c740b4b25a8cf739))
 * **wrong codes:** handle URL encoding redirect in login action ([29df140](https://github.com/hyunwlee-dev/survey-app/commit/29df140c3516ca4039cb6e29fa8de20491d7ba3c))
 
