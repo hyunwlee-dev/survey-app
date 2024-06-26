@@ -1,10 +1,10 @@
 import { LOCALSTORAGGE_KEY } from '@constants';
-import type { SurveyInfo } from '@types';
+import type { SurveyInfoType } from '@types';
 
 export default class LocalStorage {
   private key = LOCALSTORAGGE_KEY;
 
-  save(surveyInfo: SurveyInfo) {
+  save(surveyInfo: SurveyInfoType) {
     localStorage.setItem(this.key, JSON.stringify(surveyInfo));
   }
 

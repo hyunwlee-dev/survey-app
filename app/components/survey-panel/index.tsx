@@ -11,7 +11,7 @@ import {
   Finish,
 } from '@components';
 import { Survey } from '@constants';
-import type { SurveyType } from '@types';
+import type { SurveyInfoType, SurveyType } from '@types';
 import { gradeService } from '@utils/gradeService';
 import LocalStorage from '@utils/local-storage';
 
@@ -21,9 +21,14 @@ type Steps = (typeof steps)[number];
 
 const storage = new LocalStorage();
 
-export default function SurveyPanel() {
+export default function SurveyPanel({
+  createSurvey,
+}: {
+  // eslint-disable-next-line no-unused-vars
+  createSurvey: (surveyInfo: SurveyInfoType) => Promise<void>;
+}) {
   const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams);
+  const params = new URLSearchParams(searchParams.toString());
   const [step, setStep] = useState<Steps>('서비스 만족도');
   const currentStep = steps.indexOf(step);
   const isLastStep = currentStep === steps.length;
@@ -53,16 +58,21 @@ export default function SurveyPanel() {
     return sum;
   };
 
-  const onSubmit: SubmitHandler<SurveyType> = data => {
+  const onSubmit: SubmitHandler<SurveyType> = async data => {
     const team = params.get('team');
     const name = params.get('name');
+    const score = grade(data);
+    await createSurvey({
+      team: team as string,
+      name: name as string,
+      score: score,
+    });
     storage.save({
       team: team as string,
       name: name as string,
       score: grade(data),
     });
     nextStep();
-    return data;
   };
 
   return (
