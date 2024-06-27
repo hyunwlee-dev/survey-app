@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.8.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.7.0...v1.8.0) (2024-06-27)
+
+### ✨ Features
+
+* authentication process ([5d8d1f7](https://github.com/hyunwlee-dev/survey-app/commit/5d8d1f73924070f71b2b11a3ca4c6d7781357bd9))
+
 ## [1.7.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.6.1...v1.7.0) (2024-06-27)
 
 ### ✨ Features
