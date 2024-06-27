@@ -17,12 +17,13 @@ import styles from './page.css';
 
 export default async function DashboardPage() {
   await checkLoggedIn();
-  const [{ scoresSum, higherSumTeam }, scoresAverage, scoresStandardDeviation] =
-    await Promise.all([
+  const [scoresSum, scoresAverage, scoresStandardDeviation] = await Promise.all(
+    [
       await getTeamScoresSum(),
       await getTeamScoresAverage(),
       await getTeamScoresStandardDeviation(),
-    ]);
+    ],
+  );
   return (
     <Board headingText="DashBoard">
       <Link className={styles.homeLink} href="/">
@@ -33,11 +34,7 @@ export default async function DashboardPage() {
           <LogoutIcon />
         </button>
       </form>
-      <SumChart
-        className={styles.sumChart}
-        scoresSum={scoresSum}
-        higherSumTeam={higherSumTeam as string}
-      />
+      <SumChart className={styles.sumChart} scoresSum={scoresSum} />
       <AverageChart
         className={styles.averageChart}
         scoresAverage={scoresAverage}

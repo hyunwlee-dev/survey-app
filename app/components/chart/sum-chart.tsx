@@ -40,10 +40,8 @@ type ScoresSum = { team: string | null; sum: number };
 export default function SumChart({
   className,
   scoresSum,
-  higherSumTeam,
 }: PropsWithClassName<{
   scoresSum: ScoresSum[];
-  higherSumTeam: string;
 }>) {
   const labels = scoresSum.map(({ team }) => team);
   const data = {
@@ -52,9 +50,7 @@ export default function SumChart({
       {
         label: 'sum',
         data: scoresSum.map(({ sum }: { sum: number }) => sum),
-        backgroundColor: scoresSum.map(({ team }) =>
-          team === higherSumTeam ? '#44CFBB' : '#e0dfe1',
-        ),
+        backgroundColor: '#44CFBB',
       },
     ],
   };

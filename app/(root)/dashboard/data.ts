@@ -12,44 +12,48 @@ export async function getUsers() {
 }
 
 export async function getTeamScoresSum() {
-  const teams = await prisma.team.findMany({
-    include: {
-      user: true,
+  const groupUsers = await prisma.user.groupBy({
+    by: ['team_id'],
+    _sum: {
+      score: true,
     },
   });
 
-  const scoresSum = teams.map(team => ({
-    team: team.name,
-    sum: team.user.reduce((acc, user) => acc + user.score, 0),
-  }));
+  const teams = await prisma.team.findMany();
 
-  const higherSumTeam = scoresSum.reduce(
-    (cal, curr) => (curr.sum > cal.sum ? curr : cal),
-    { team: '', sum: 0 },
-  );
+  const scoresSum = teams.map(team => {
+    const group = groupUsers.find(group => group.team_id === team.id);
+    return {
+      team: team.name,
+      sum: group ? group._sum?.score || 0 : 0,
+    };
+  });
 
-  return {
-    scoresSum,
-    higherSumTeam: higherSumTeam.team,
-  };
+  return scoresSum;
 }
 
 export async function getTeamScoresAverage() {
-  const teams = await prisma.team.findMany({
-    include: {
-      user: true,
+  const groupUsers = await prisma.user.groupBy({
+    by: ['team_id'],
+    _sum: {
+      score: true,
+    },
+    _count: {
+      team_id: true,
     },
   });
 
-  return teams.map(team => {
-    const sum = team.user.reduce((acc, user) => acc + user.score, 0);
-    const average = sum / team.user.length || 0;
+  const teams = await prisma.team.findMany();
 
+  const scoresAverage = teams.map(team => {
+    const group = groupUsers.find(group => group.team_id === team.id);
     return {
       team: team.name,
-      average: average,
+      average: group ? (group._sum?.score || 0) / group._count.team_id : 0,
     };
   });
+
+  return scoresAverage;
 }
 
 export async function getTeamScoresStandardDeviation() {

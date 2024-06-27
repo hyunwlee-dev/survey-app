@@ -2,11 +2,32 @@ import { style } from '@vanilla-extract/css';
 import { vars } from '@/app/styles/theme.css';
 import $breakpoints from '@styles/utils';
 
-const sumChart = style({ marginTop: '4rem' });
+const sumChart = style({
+  marginTop: '2rem',
+  '@media': {
+    [$breakpoints.tablet]: {
+      marginTop: '4rem',
+    },
+  },
+});
 
-const averageChart = style({ marginTop: '8rem' });
+const averageChart = style({
+  marginTop: '4rem',
+  '@media': {
+    [$breakpoints.tablet]: {
+      marginTop: '8rem',
+    },
+  },
+});
 
-const standardDeviationChart = style({ margin: '8rem 0 4rem' });
+const standardDeviationChart = style({
+  margin: '4rem 0 2rem',
+  '@media': {
+    [$breakpoints.tablet]: {
+      margin: '8rem 0 4rem',
+    },
+  },
+});
 
 const homeLink = style({
   position: 'absolute',
