@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { checkLoggedIn } from '@actions/login';
 import {
   AverageChart,
   Board,
@@ -13,6 +14,7 @@ import {
 import styles from './page.css';
 
 export default async function DashboardPage() {
+  await checkLoggedIn();
   const [{ scoresSum, higherSumTeam }, scoresAverage, scoresStandardDeviation] =
     await Promise.all([
       await getTeamScoresSum(),
