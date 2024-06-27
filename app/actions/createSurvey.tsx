@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 export async function createSurvey({ team, name, score }: SurveyInfoType) {
   await prisma.user.create({
     data: {
-      team,
+      team_id: Number(team),
       name,
       score,
     },

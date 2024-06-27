@@ -34,4 +34,16 @@ export const LoginGretting = {
     '안녕하세요.\n대시보드에 접근하기 위해서는 관리자 권한이 필요합니다.',
 };
 
+export const TeamArray = [
+  '서울',
+  '경기',
+  '충북',
+  '충남',
+  '강원',
+  '전북',
+  '전남',
+  '경북',
+  '경남',
+] as const;
+
 export const LOCALSTORAGGE_KEY = 'survey';

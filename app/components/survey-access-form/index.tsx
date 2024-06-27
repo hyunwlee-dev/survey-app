@@ -8,14 +8,16 @@ import styles from './survey-access-form.css';
 export default function SurveyAccessForm({
   teamList,
 }: {
-  teamList: { id: bigint; name: string | null }[];
+  teamList: { id: number; name: string | null }[];
 }) {
   const [errorMessage, dispatch] = useFormState(surveyAccess, undefined);
   return (
     <form className={styles.form} action={dispatch}>
       <select className={styles.select} id="team" name="team">
         {teamList.map(({ id, name }) => (
-          <option key={id}>{name}</option>
+          <option key={id} value={id}>
+            {name}
+          </option>
         ))}
       </select>
       <input
