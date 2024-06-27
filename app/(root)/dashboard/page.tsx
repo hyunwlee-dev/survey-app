@@ -1,11 +1,13 @@
 import Link from 'next/link';
-import { checkLoggedIn } from '@actions/login';
+import { checkLoggedIn, logout } from '@actions/login';
 import {
   AverageChart,
   Board,
   StandardDeviationChart,
   SumChart,
 } from '@components';
+import HomeLinkIcon from '@icons/home.svg';
+import LogoutIcon from '@icons/logout.svg';
 import {
   getTeamScoresAverage,
   getTeamScoresStandardDeviation,
@@ -24,8 +26,13 @@ export default async function DashboardPage() {
   return (
     <Board headingText="DashBoard">
       <Link className={styles.homeLink} href="/">
-        홈으로
+        <HomeLinkIcon />
       </Link>
+      <form action={logout}>
+        <button className={styles.logoutButton} type="submit">
+          <LogoutIcon />
+        </button>
+      </form>
       <SumChart
         className={styles.sumChart}
         scoresSum={scoresSum}

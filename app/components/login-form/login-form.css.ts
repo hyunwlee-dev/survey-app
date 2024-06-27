@@ -19,6 +19,19 @@ const surveyButton = style({
   color: vars.color.pureWhite,
 });
 
+const homeLink = style({
+  marginTop: '1rem',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '100%',
+  height: '2.944rem',
+  borderRadius: '0.5rem',
+  fontWeight: '700',
+  letterSpacing: '1px',
+  background: vars.color.lightGreen,
+});
+
 const error = style({
   position: 'absolute',
   bottom: '3.4rem',
@@ -28,6 +41,6 @@ const error = style({
   fontWeight: 500,
 });
 
-const styles = { form, nameInput, surveyButton, error };
+const styles = { form, nameInput, surveyButton, homeLink, error };
 
 export default styles;

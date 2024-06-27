@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { login } from '@actions/login';
 import styles from './login-form.css';
 
@@ -22,6 +23,9 @@ export default function LoginForm() {
       <button className={styles.surveyButton} type="submit" formAction={login}>
         로그인
       </button>
+      <Link className={styles.homeLink} href={'/'}>
+        홈으로
+      </Link>
     </form>
   );
 }
