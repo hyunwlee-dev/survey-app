@@ -2,6 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { TeamArray } from '@constants';
 
 const SurveySchema = z.object({
   team: z.string().min(1, '팀을 선택해주세요.'),
@@ -22,6 +23,6 @@ export async function surveyAccess(
   const { team, name } = validatedFields.data;
 
   redirect(
-    `/survey?team=${encodeURIComponent(team)}&name=${encodeURIComponent(name)}`,
+    `/survey?team=${encodeURIComponent(TeamArray[Number(team)])}&name=${encodeURIComponent(name)}`,
   );
 }

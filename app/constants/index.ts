@@ -35,6 +35,7 @@ export const LoginGretting = {
 };
 
 export const TeamArray = [
+  '',
   '서울',
   '경기',
   '충북',
