@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   AverageChart,
   Board,
@@ -20,6 +21,9 @@ export default async function DashboardPage() {
     ]);
   return (
     <Board headingText="DashBoard">
+      <Link className={styles.homeLink} href="/">
+        홈으로
+      </Link>
       <SumChart
         className={styles.sumChart}
         scoresSum={scoresSum}
