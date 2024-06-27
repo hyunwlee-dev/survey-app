@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.9.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.8.0...v1.9.0) (2024-06-27)
+
+### ✨ Features
+
+* **api:** add supabase logout ([b79fb4f](https://github.com/hyunwlee-dev/survey-app/commit/b79fb4fb7183a3693e3681d5f9ee8bfaef450171))
+
 ## [1.8.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.7.0...v1.8.0) (2024-06-27)
 
 ### ✨ Features
