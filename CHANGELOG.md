@@ -1,5 +1,18 @@
 # 🚦 CHANGELOG
 
+## [1.7.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.6.1...v1.7.0) (2024-06-27)
+
+### ✨ Features
+
+* add home link in dashboard page ([01a33c3](https://github.com/hyunwlee-dev/survey-app/commit/01a33c3a723f85fcb74542d431b5080aef30d02b))
+* add regionType type ([0a3c362](https://github.com/hyunwlee-dev/survey-app/commit/0a3c362ea2996b1b7dad9c72fbcd75d79653951c))
+* **api:** add getTeamList prisma function ([c3a67d2](https://github.com/hyunwlee-dev/survey-app/commit/c3a67d268365298c7eb38d0595207becaf7b5db8))
+* **component:** add sum-chart, average-chart, standard-deviation-chart ([5d43552](https://github.com/hyunwlee-dev/survey-app/commit/5d435520c08e749a80eb91a26193661be6adb5e9))
+
+### ♻️ Refactor
+
+* change team-input to team-select-box ([79df182](https://github.com/hyunwlee-dev/survey-app/commit/79df18206187ab152812cb0b2a80d4202590c328))
+
 ## [1.6.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.6.0...v1.6.1) (2024-06-26)
 
 ### 🐛 Bug Fixes
