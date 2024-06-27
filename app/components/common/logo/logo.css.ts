@@ -2,9 +2,9 @@ import { style } from '@vanilla-extract/css';
 import $breakpoints from '@styles/utils';
 
 const logo = style({
-  position: 'absolute',
+  position: 'fixed',
   transform: 'scale(0.4)',
-  bottom: '2rem',
+  bottom: '0rem',
   right: 0,
   '@media': {
     [$breakpoints.tablet]: {

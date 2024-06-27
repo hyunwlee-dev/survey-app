@@ -7,3 +7,4 @@ export { default as Finish } from './finish';
 export { default as SurveyAccessForm } from './survey-access-form';
 export { default as StepButtons } from './step-buttons';
 export { default as LoginForm } from './login-form';
+export { SumChart, AverageChart, StandardDeviationChart } from './chart';

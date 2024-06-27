@@ -1,5 +1,38 @@
-import { Board } from '@/app/components';
+import {
+  AverageChart,
+  Board,
+  StandardDeviationChart,
+  SumChart,
+} from '@components';
+import {
+  getTeamScoresAverage,
+  getTeamScoresStandardDeviation,
+  getTeamScoresSum,
+} from './data';
+import styles from './page.css';
 
 export default async function DashboardPage() {
-  return <Board>안녕하세요, </Board>;
+  const [{ scoresSum, higherSumTeam }, scoresAverage, scoresStandardDeviation] =
+    await Promise.all([
+      await getTeamScoresSum(),
+      await getTeamScoresAverage(),
+      await getTeamScoresStandardDeviation(),
+    ]);
+  return (
+    <Board headingText="DashBoard">
+      <SumChart
+        className={styles.sumChart}
+        scoresSum={scoresSum}
+        higherSumTeam={higherSumTeam as string}
+      />
+      <AverageChart
+        className={styles.averageChart}
+        scoresAverage={scoresAverage}
+      />
+      <StandardDeviationChart
+        className={styles.standardDeviationChart}
+        scoresStandardDeviation={scoresStandardDeviation}
+      />
+    </Board>
+  );
 }
