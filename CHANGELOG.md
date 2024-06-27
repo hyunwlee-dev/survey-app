@@ -1,5 +1,11 @@
 # 🚦 CHANGELOG
 
+## [1.9.1](https://github.com/hyunwlee-dev/survey-app/compare/v1.9.0...v1.9.1) (2024-06-27)
+
+### ♻️ Refactor
+
+* **api:** use prisma ORM ([c918d19](https://github.com/hyunwlee-dev/survey-app/commit/c918d1975c86a918f4c0fbc01b6d9a69f4562d98))
+
 ## [1.9.0](https://github.com/hyunwlee-dev/survey-app/compare/v1.8.0...v1.9.0) (2024-06-27)
 
 ### ✨ Features
